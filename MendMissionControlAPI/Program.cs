@@ -1,11 +1,15 @@
 using MendMissionControl.Api.Data;
 using MendMissionControl.Api.Services;
 using Microsoft.EntityFrameworkCore;
+using Oracle.EntityFrameworkCore.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection")));
+    options.UseOracle(
+        builder.Configuration.GetConnectionString("OracleConnection"),
+        oracleOptions => oracleOptions.UseOracleSQLCompatibility(OracleSQLCompatibility.DatabaseVersion21)
+    ));
 
 builder.Services.AddScoped<IRiscoService, RiscoService>();
 builder.Services.AddScoped<IMissaoService, MissaoService>();

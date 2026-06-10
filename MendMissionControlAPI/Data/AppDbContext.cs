@@ -19,6 +19,26 @@ public class AppDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
+        modelBuilder.Entity<DetritoOrbital>()
+            .Property(d => d.Id)
+            .ValueGeneratedOnAdd();
+
+        modelBuilder.Entity<EquipamentoEspacial>()
+            .Property(e => e.Id)
+            .ValueGeneratedOnAdd();
+
+        modelBuilder.Entity<MissaoRemocao>()
+            .Property(m => m.Id)
+            .ValueGeneratedOnAdd();
+
+        modelBuilder.Entity<Telemetria>()
+            .Property(t => t.Id)
+            .ValueGeneratedOnAdd();
+
+        modelBuilder.Entity<MendCredit>()
+            .Property(c => c.Id)
+            .ValueGeneratedOnAdd();
+
         modelBuilder.Entity<EquipamentoEspacial>()
             .HasDiscriminator<string>("TipoEquipamento")
             .HasValue<NaveLimpezaOrbital>("NAVE_LIMPEZA_ORBITAL")
