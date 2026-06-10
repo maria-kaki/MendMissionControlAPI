@@ -1,0 +1,6 @@
+@MendMissionControlAPI_HostAddress = http://localhost:5120
+
+GET {{MendMissionControlAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
