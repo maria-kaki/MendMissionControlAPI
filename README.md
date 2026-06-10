@@ -3,7 +3,7 @@
 Space Connect - FIAP Global Solution 2026
 API de controle de missões orbitais para remoção de detritos espaciais na camada LEO.
 
-Video Pitch: https://www.youtube.com/watch?v=_MjGn6lEQS0
+**Pitch do projeto:** [Clique aqui para assistir ao vídeo](https://www.youtube.com/watch?v=_MjGn6lEQS0)
 
 ---
 
@@ -137,10 +137,10 @@ dotnet run --project MendMissionControlAPI
 
 ### 5. Acessar o Swagger
 
-Abra no navegador a URL exibida no terminal ao iniciar, por exemplo:
+Após executar a aplicação, acesse o Swagger pela URL exibida no terminal. No ambiente utilizado nos testes, a API foi executada em:
 
 ```
-https://localhost:7XXX/swagger
+http://localhost:5207/swagger
 ```
 
 ---
